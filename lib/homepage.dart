@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planner/templates/home.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   int selectedIndex = 0;
   final widgetOptions = [
-    const Text('Home'),
+    const Home(),
     const Text('Alarm'),
     const Text('TimeSchedule'),
     const Text('Calendar'),
