@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planner/templates/home.dart';
+import 'package:planner/views/home.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -21,8 +21,14 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF383F51),
-      body: Center(
-        child: widgetOptions.elementAt(selectedIndex),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: widgetOptions.elementAt(selectedIndex),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
