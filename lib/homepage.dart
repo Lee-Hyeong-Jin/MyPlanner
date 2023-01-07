@@ -22,12 +22,12 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: const Color(0xFF383F51),
       body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: widgetOptions.elementAt(selectedIndex),
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              widgetOptions.elementAt(selectedIndex),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: Container(
