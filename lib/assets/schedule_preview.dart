@@ -15,22 +15,22 @@ class SchedulePreviewState extends State<SchedulePreview> {
       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
       child: Column(
         children: <Widget> [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget> [
-              const Text("알람", style: TextStyle(color: Colors.white, fontSize: 18)),
-              const SizedBox(height: 30),
-              Row(
-                children: const <Widget> [
-                  Icon(Icons.add, color: Colors.white),
-                  Text("더보기", style: TextStyle(color: Colors.white, fontSize: 12)),
-                ]
-              )
-            ],
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget> [
+                const Text("알람", style: TextStyle(color: Colors.white, fontSize: 18)),
+                Row(
+                  children: const <Widget> [
+                    Icon(Icons.add, color: Colors.white),
+                    Text("더보기", style: TextStyle(color: Colors.white, fontSize: 12)),
+                  ]
+                )
+              ],
+            ),
           ),
-          const SizedBox(
-            child: CardView(),
-          )
+          const CardView(),
         ]
       )
     );

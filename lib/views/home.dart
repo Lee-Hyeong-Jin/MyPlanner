@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-//import 'package:planner/assets/today_preview.dart';
+import 'package:planner/assets/today_preview.dart';
 //import 'package:planner/assets/calendar_preview.dart';
 import 'package:planner/assets/schedule_preview.dart';
 
@@ -33,13 +33,16 @@ class HomeState extends State<Home> {
     var now = DateTime.now();
     var formattedTime = DateFormat("HH:mm:ss").format(now);
 
-    return Column( 
-      children: [
-        Text(formattedTime, style: const TextStyle(color: Colors.white, fontSize: 50), textAlign: TextAlign.center,),
-        const SchedulePreview(),
-      // TodayPreview(),
-      // CalendarPreview(),
-      ],
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Column(
+        children: [
+          Text(formattedTime, style: const TextStyle(color: Colors.white, fontSize: 64), textAlign: TextAlign.center,),
+          const SchedulePreview(),
+          const TodayPreview(),
+        // CalendarPreview(),
+        ],
+      ),
     );
   }
 
