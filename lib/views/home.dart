@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import 'package:planner/assets/today_preview.dart';
-//import 'package:planner/assets/calendar_preview.dart';
+import 'package:planner/assets/calendar_preview.dart';
 import 'package:planner/assets/schedule_preview.dart';
 
 class Home extends StatefulWidget {
@@ -40,7 +40,7 @@ class HomeState extends State<Home> {
           Text(formattedTime, style: const TextStyle(color: Colors.white, fontSize: 64), textAlign: TextAlign.center,),
           const SchedulePreview(),
           const TodayPreview(),
-        // CalendarPreview(),
+          const CalendarPreview(),
         ],
       ),
     );
