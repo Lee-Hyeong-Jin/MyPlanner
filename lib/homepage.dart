@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planner/views/home.dart';
+import 'package:planner/views/schedule.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class HomePageState extends State<HomePage> {
   int selectedIndex = 0;
   final widgetOptions = [
     const Home(),
-    const Text('Alarm'),
+    const Schedule(),
     const Text('TimeSchedule'),
     const Text('Calendar'),
   ];
@@ -22,13 +23,7 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: const Color(0xFF383F51),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              widgetOptions.elementAt(selectedIndex),
-            ],
-          ),
-        ),
+        child: widgetOptions.elementAt(selectedIndex),
       ),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
