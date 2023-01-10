@@ -1,4 +1,6 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:planner/assets/prefabs/add_box.dart';
 
 import 'package:planner/assets/prefabs/card_view.dart';
 import 'package:planner/data.dart';
@@ -21,13 +23,22 @@ class ScheduleState extends State<Schedule> {
           const SizedBox(height: 20),
           Expanded(
             child: ListView(
-              children: alarms.map((alarm) {
+              children: alarms.map<Widget>((alarm) {
                 return Column(
                   children: const <Widget> [
                     CardView()
                   ]
                 );
-              }).toList(),
+              }).followedBy([
+                DottedBorder(
+                  strokeWidth: 1,
+                  color: Colors.white,
+                  borderType: BorderType.RRect,
+                  radius: const Radius.circular(24),
+                  dashPattern: const [8, 6],
+                  child: const AddBox(),
+                )
+              ]).toList(),
             )
           ),
         ]
