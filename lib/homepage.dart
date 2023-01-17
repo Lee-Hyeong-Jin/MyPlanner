@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:planner/views/home.dart';
 import 'package:planner/views/schedule.dart';
+import 'package:planner/views/today.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class HomePageState extends State<HomePage> {
   final widgetOptions = [
     const Home(),
     const Schedule(),
-    const Text('TimeSchedule'),
+    const TimeTable(),
     const Text('Calendar'),
   ];
 
