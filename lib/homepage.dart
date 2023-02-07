@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planner/views/calendar.dart';
 import 'package:planner/views/home.dart';
 import 'package:planner/views/schedule.dart';
 import 'package:planner/views/today.dart';
@@ -16,7 +17,7 @@ class HomePageState extends State<HomePage> {
     const Home(),
     const Schedule(),
     const TimeTable(),
-    const Text('Calendar'),
+    const Calendar(),
   ];
 
   @override

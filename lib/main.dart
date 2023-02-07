@@ -1,3 +1,4 @@
+import 'package:calendar_view/calendar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:planner/homepage.dart';
 
@@ -10,12 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "MyPlanner",
-      theme: ThemeData(
-        primaryColor: Colors.blue,
-      ),
-      home: const HomePage(),
+    return CalendarControllerProvider (
+      controller: EventController(),
+      child: MaterialApp(
+        title: "MyPlanner",
+        theme: ThemeData(
+          primaryColor: Colors.blue,
+        ),
+        home: const HomePage(),
+      )
     );
   }
 }
